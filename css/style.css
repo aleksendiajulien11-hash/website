@@ -349,12 +349,6 @@ nav ul li a:hover {
     font-size: 20px;
 }
 
-.about-image {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-}
-
 .about-image img {
     width: 100%;
     max-width: 550px;
@@ -362,6 +356,72 @@ nav ul li a:hover {
 }
 
 
+ .cv-section {
+    background: #f5f1ff ;
+    text-align: center;
+    padding: 100px 25px;
+    margin: 50px auto;
+    width: 95%;
+    max-width: 1200px;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+.cv-section h2 {
+    color: #6f5aa8;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cv-section p {
+    color: #555;
+    font-size: 17px;
+    margin: 0 auto 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.cv-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 25px;
+    background: #7136bd;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.cv-btn:hover {
+    background: #7136bd;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .cv-section {
+        width: 90%;
+        padding: 40px 20px;
+    }
+
+    .cv-buttons {
+        flex-direction: column;
+    }
+
+    .cv-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
 /* STATISTIQUES */
 
 .stats {
@@ -614,6 +674,33 @@ nav ul li a:hover {
     gap: 15px;
     margin-bottom: 25px;
 }
+ .email-btn{
+    display: inline-block;
+    padding: 12px20px;
+    background: #6c35b7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+ .email-btn{
+    background: #c6a2f2;
+ }
+
+ .telephone-btn{
+    display: inline-block;
+    padding: 12px20px;
+    background: #6c35b7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+ .telephone-btn{
+    background: #c6a2f2;
+ }
 
 .coordinate-icon {
     width: 40px;
@@ -643,60 +730,48 @@ nav ul li a:hover {
     margin-top: 25px;
 }
 
-.socials {
-    display: flex;
-    gap: 10px;
-    margin-top: 12px;
-}
 
-.socials span {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.15);
-    font-size: 13px;
-}
 
 
 /*ASSISTANCE */
 
 .assistance {
-    max-width: 1200px;
-    margin: 0 auto 70px;
-    padding: 30px 7%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(69, 35, 110, 0.08);
-}
-
-.assistance-icon {
-    width: 55px;
-    height: 55px;
-    min-width: 55px;
+    grid-column: 1/-1;
+    width: 85%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #eee4ff;
-    color: #7138b8;
-    border-radius: 50%;
-    font-size: 23px;
+    gap: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(69, 35, 110, 0.08);
+}
+.assistance>div:not(.assistance-icon){
+    text-align: center;
+}
+.assistance-content{
+    text-align: center;
+}
+.assistance button{
+    display: block;
+    margin:15px auto 0;
 }
 
-.assistance h3 {
-    color: #35264a;
-    font-size: 20px;
-    margin-bottom: 5px;
+.assistance-icon {
+   flex-shrink: 0;
 }
 
-.assistance p {
-    color: #706979;
-    font-size: 14px;
+.assistance-content{
+flex:0 1 auto;
+}
+
+.assistance button {
+   flex-shrink: o;
 }
 
 .call-button {
@@ -720,7 +795,7 @@ nav ul li a:hover {
 footer {
     padding: 25px 7%;
     text-align: center;
-    background: #241334;
+    background: #3e196b;
     color: #ffffff;
 }
 
