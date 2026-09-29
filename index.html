@@ -556,7 +556,7 @@
             </h2>
 
 
-            <form>
+            <form id="contactForm">
 
 
                 <div class="form-row">
@@ -682,29 +682,31 @@
                 </div>
 
 
-              <button type="submit">Envoyer</button>
+              <button type="button" id="whatsappBtn">Envoyer</button>
                 
 
             </form>
               <script>
-                document.getElementById("contactForm").addEventListener("submit",function(e))
-                {
-                    e.preventDefault();
-                    const nom=document.getElementById("nom").value;
-                    const email=document.getElementById("email").value;
-                    const telephone=document.getElementById("telephone").value;
-                    const message=document.getElementById("message").value;
-                    const numeroWhatsApp="50955263047";
-                    const texte=
-                    "Bonjour,je vous contacte depuis votre site.%0A%0A"+
-                    "Nom:"+encodeURIComponent(nom)+"%0A"+
-                    "Email:"+encodeURIComponent(email)+"%0A"+
-                    "telephone:"+encodeURIComponent(telephone)+"%0A"+
-                    "Message:"+encodeURIComponent(message);
-                    
-                    const lien="https://wa.me/"+50955263047+"?text="+texte;
-                    Window.open(lien,"_blank");
-                };
+               document.getElementById("whatsappBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+   
+    const nom = document.getElementById("nom").value;
+    const email = document.getElementById("email").value;
+    const telephone = document.getElementById("telephone").value;
+    const sujet = document.getElementById("sujet").value;
+    const message = document.getElementById("message").value;
+
+    const texte = "Bonjour, je vous contacte depuis votre site.\n\n" +
+        "Nom: " + nom + "\n" +
+        "Email: " + email + "\n" +
+        "telephone: " + telephone + "\n" +
+        "sujet: " + sujet + "\n" +
+        "Message: " + message;
+
+    const lien = "https://wa.me/50955263047?text=" + encodeURIComponent(texte);
+
+    window.open(lien, "_blank");
+});
               </script>
 
         </div>
