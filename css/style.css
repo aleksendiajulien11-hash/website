@@ -38,8 +38,9 @@ nav {
     justify-content: space-between;
     background: #ffffff;
     box-shadow: 0 2px 15px rgba(71, 39, 120, 0.08);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
 
@@ -569,7 +570,7 @@ nav ul li a:hover {
 }
 
 
-/* FORM BOX */
+/* FORMULAIRE */
 
 .contact-form-box {
     background: #ffffff;
@@ -634,7 +635,7 @@ nav ul li a:hover {
     box-shadow: 0 0 0 3px rgba(113, 56, 184, 0.08);
 }
 
-.contact-form-box input[type="submit"] {
+.contact-form-box input[type="button"] {
     border: none;
     padding: 13px 24px;
     border-radius: 7px;
@@ -645,8 +646,19 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.contact-form-box input[type="submit"]:hover {
+.contact-form-box input[type="button"]:hover {
     background: #4f208e;
+}
+#whatsappBtn{
+    background-color: #4f208e;
+    color: #ffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 
